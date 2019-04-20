@@ -4,7 +4,7 @@
 #
 Name     : pypowervm
 Version  : 1.1.20
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/20/6e/cdaa57e101476a24655bfb0b83423618d92a6066210cf3bf0e15f60a959b/pypowervm-1.1.20.tar.gz
 Source0  : https://files.pythonhosted.org/packages/20/6e/cdaa57e101476a24655bfb0b83423618d92a6066210cf3bf0e15f60a959b/pypowervm-1.1.20.tar.gz
 Summary  : Python binding for the PowerVM REST API
