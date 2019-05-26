@@ -4,7 +4,7 @@
 #
 Name     : pypowervm
 Version  : 1.1.21
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/33/71/fea5296390e0955e0784df0048ad5bedf239845f1150445729e37b3118d5/pypowervm-1.1.21.tar.gz
 Source0  : https://files.pythonhosted.org/packages/33/71/fea5296390e0955e0784df0048ad5bedf239845f1150445729e37b3118d5/pypowervm-1.1.21.tar.gz
 Summary  : Python binding for the PowerVM REST API
@@ -42,6 +42,7 @@ BuildRequires : pytz
 BuildRequires : requests
 BuildRequires : six
 BuildRequires : taskflow
+Patch1: req.patch
 
 %description
 Python API wrapper for PowerVM
@@ -74,13 +75,14 @@ python3 components for the pypowervm package.
 
 %prep
 %setup -q -n pypowervm-1.1.21
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1558821907
+export SOURCE_DATE_EPOCH=1558895061
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
