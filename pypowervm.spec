@@ -4,7 +4,7 @@
 #
 Name     : pypowervm
 Version  : 1.1.21
-Release  : 9
+Release  : 10
 URL      : https://files.pythonhosted.org/packages/33/71/fea5296390e0955e0784df0048ad5bedf239845f1150445729e37b3118d5/pypowervm-1.1.21.tar.gz
 Source0  : https://files.pythonhosted.org/packages/33/71/fea5296390e0955e0784df0048ad5bedf239845f1150445729e37b3118d5/pypowervm-1.1.21.tar.gz
 Summary  : Python binding for the PowerVM REST API
@@ -13,7 +13,6 @@ License  : Apache-2.0
 Requires: pypowervm-license = %{version}-%{release}
 Requires: pypowervm-python = %{version}-%{release}
 Requires: pypowervm-python3 = %{version}-%{release}
-Requires: futures
 Requires: lxml
 Requires: oslo.concurrency
 Requires: oslo.context
@@ -28,7 +27,6 @@ Requires: requests
 Requires: six
 Requires: taskflow
 BuildRequires : buildreq-distutils3
-BuildRequires : futures
 BuildRequires : lxml
 BuildRequires : oslo.concurrency
 BuildRequires : oslo.context
@@ -45,7 +43,24 @@ BuildRequires : taskflow
 Patch1: req.patch
 
 %description
-Python API wrapper for PowerVM
+pypowervm - Python API wrapper for PowerVM
+        ==========================================
+        
+        NOTE
+        ----
+        Current versions should utilize the local authentication mechanism.  The remote
+        authentication mechanism is intended only for development and test purposes for
+        the time being.
+        
+        Overview
+        --------
+        pypowervm provides a Python-based API wrapper for interaction with IBM
+        PowerVM-based systems.
+        
+        License
+        -------
+        The library's license can be found in the LICENSE_ file.  It must be
+        reviewed prior to use.
 
 %package license
 Summary: license components for the pypowervm package.
@@ -82,7 +97,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1558895061
+export SOURCE_DATE_EPOCH=1559111163
+export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
