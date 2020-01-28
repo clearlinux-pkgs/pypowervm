@@ -1,5 +1,5 @@
 PKG_NAME := pypowervm
-URL = https://files.pythonhosted.org/packages/f0/82/54a8e1d086032f8dc67a85188f7f482bb9af13a5d45246b82e59ce8a320b/pypowervm-1.1.22.tar.gz
+URL = https://files.pythonhosted.org/packages/16/c1/8e6574bd5e8936fd858bab0b1aa1b825cfc61e0cebf65a248239c7b2c01b/pypowervm-1.1.24.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
