@@ -4,7 +4,7 @@
 #
 Name     : pypowervm
 Version  : 1.1.24
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/16/c1/8e6574bd5e8936fd858bab0b1aa1b825cfc61e0cebf65a248239c7b2c01b/pypowervm-1.1.24.tar.gz
 Source0  : https://files.pythonhosted.org/packages/16/c1/8e6574bd5e8936fd858bab0b1aa1b825cfc61e0cebf65a248239c7b2c01b/pypowervm-1.1.24.tar.gz
 Summary  : Python binding for the PowerVM REST API
@@ -82,6 +82,20 @@ python components for the pypowervm package.
 Summary: python3 components for the pypowervm package.
 Group: Default
 Requires: python3-core
+Provides: pypi(pypowervm)
+Requires: pypi(lxml)
+Requires: pypi(oslo.concurrency)
+Requires: pypi(oslo.context)
+Requires: pypi(oslo.i18n)
+Requires: pypi(oslo.log)
+Requires: pypi(oslo.utils)
+Requires: pypi(pbr)
+Requires: pypi(pyasn1)
+Requires: pypi(pyasn1_modules)
+Requires: pypi(pytz)
+Requires: pypi(requests)
+Requires: pypi(six)
+Requires: pypi(taskflow)
 
 %description python3
 python3 components for the pypowervm package.
@@ -96,7 +110,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580173012
+export SOURCE_DATE_EPOCH=1583704092
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
